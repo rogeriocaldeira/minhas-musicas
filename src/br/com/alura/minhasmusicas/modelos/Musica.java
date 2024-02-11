@@ -30,4 +30,22 @@ public class Musica extends Audio {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+
+    public void info() {
+        System.out.println("nome do cantor " + cantor);
+        System.out.println("nome do album " + album);
+        System.out.println("estilo de musica " + genero);
+    }
+
+    @Override
+    public int getClassificacao() {
+        if (this.getTotalReproducoes() > 2000) {
+            return 10;
+        } else {
+            return 8;
+        }
+    }
 }
+
+
+

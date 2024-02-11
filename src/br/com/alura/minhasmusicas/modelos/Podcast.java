@@ -1,6 +1,6 @@
 package br.com.alura.minhasmusicas.modelos;
 
-public class Podcast extends Audio{
+public class Podcast extends Audio {
     private String apresentador;
     private String descricao;
 
@@ -18,5 +18,14 @@ public class Podcast extends Audio{
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    @Override
+    public int getClassificacao() {
+        if (this.getTotalReproducoes()>2000){
+            return 10;
+        }else {
+            return 7;
+        }
     }
 }
